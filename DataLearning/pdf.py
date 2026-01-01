@@ -25,15 +25,12 @@ atual = ""
 
 for linha in texto.splitlines():
 
-    # se encontrou "Foto:" e já tem texto guardado,
-    # então começa uma nova redação
     if "Foto:" in linha and atual != "":
         redacoes.append(atual)
         atual = ""
 
     atual += linha + "\n"
 
-# adiciona a última redação
 if atual != "":
     redacoes.append(atual)
 
